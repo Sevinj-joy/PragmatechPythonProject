@@ -15,6 +15,7 @@
 # Email: muradaliyev1996@gmail.com Parol: 123456789 ============================================= 
 # Əgər yox desə, Murad Əliyev, Uğurlar! Yazılsın
 
+
 name =input("Adinizi daxil edin__")
 if len(name) > 3 and len(name) < 11:
     surname=input("Soyadinizi daxil edin__")
