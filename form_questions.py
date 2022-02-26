@@ -16,13 +16,33 @@
 # Əgər yox desə, Murad Əliyev, Uğurlar! Yazılsın
 
 name =input("Adinizi daxil edin__")
-if len(name) > 11 and len(name) < 3:
+if len(name) > 3 and len(name) < 11:
     surname=input("Soyadinizi daxil edin__")
     if len(surname) > 5 and len(surname) < 15:
-        email=input("Email-inizi daxil edin__")
-        if len(email) > 10 and len(email) < 22:
-
+       born_year=input("Dogum ilinizi daxil edin__")
+       if int(born_year) >= 4:
+            yas=2022-int(born_year)
+            email=input("Email-inizi daxil edin__")
+            if len(email) > 10 and len(email) < 22:
+                password= input("Parolunuzu daxil edin__")
+                if len(password) > 6 and len(password) < 13:
+                    tekrar_password=input("Parolunuzu tekrar yazin__")
+                    if tekrar_password == password:
+                        print("Qeydiyyat tamamlandi! Qeydiyyatinizin detallari ile tanis olmaq isterdinizmi?")
+                        user_answer=input("")
+                        if user_answer=="He":
+                           print(f"Ad: {name}\n Soyad:{surname}\n Yas: {yas}\n Yas: {born_year}\n Email: {email}\n Parol: {password}\n ")
+                        else:
+                            print(f"{name} {surname} ugurlar!")
+                    else:
+                        print("Parolun tekrari dogru olmadi!")
+                else:
+                    print("Parol 6 simvoldan kicik, 13 herfden uzun ola bilmez!")
+            else:
+                print("Email 10 simvoldan kicik, 22 simvoldan uzun ola bilmez!")
+       else:
+            print("Dogum ili 4 simvoldan kiçik ola bilmez!.") 
     else:
-        print("Soyad 5 hərfdən kiçik,15 hərfdən uzun olmasın.") 
+        print("Soyadın uzunlugu 5-dən kiçik, 15-dən böyük ola bilməz!") 
 else:
-    print("Adın uzunlugu 3-dən kiçik, 11-dən böyük ola bilməz.")
+    print("Adın uzunlugu 3-dən kiçik, 11-dən böyük ola bilməz!")
